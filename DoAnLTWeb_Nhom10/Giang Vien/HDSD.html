@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Giới thiệu môn học</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="boostrap/css/style.css" rel="stylesheet">
+      <!--Validate: bao loi dang nhap-->
+      <script type="text/javascript">
+      function Login(){
+        var flag = true;
+        var tk = document.getElementById('user').value;
+        var mk = document.getElementById('pass').value;
+
+        if (tk == "") {
+          document.getElementById('error-user').innerHTML = "Vui lòng nhập tài khoản"
+          user.style.borderColor="red";
+          flag = false;
+        }
+        else{
+          document.getElementById('error-user').innerHTML ="";
+          user.style.borderColor = "#ccc"
+        }
+        if (mk == "") {
+          document.getElementById('error-pass').innerHTML = "Vui lòng nhập mật khẩu"
+          pass.style.borderColor="red";
+          flag = false;
+        }
+        else if(mk.length < 8){
+          document.getElementById('error-pass').innerHTML = "Mật khẩu phải từ 8 kí tự trở lên";
+          flag = false;
+        }
+        else{
+          document.getElementById('error-pass').innerHTML ="";
+          pass.style.borderColor = "#ccc"
+        }
+        if(flag == true){
+          window.location = "GV_TrangChu.html";
+        }
+
+      }
+      var qmk = document.getElementsByClassName("forget");
+          qmk.onclick = function(){
+            alert('Vui lòng liên hệ giảng viên để lấy lại mật khẩu');
+            return false;
+          }
+
+
+    </script>
+</head>
+
+<div class="container">
+		<div class="row">
+          <div class="logo col-md-6 col-sm-6 col-xs-12"><h1><a href="#">Hệ thống</a></h1></div>
+          <div class="search col-md-6 col-sm-6 col-xs-12 text-right">
+            <form method="get" action="#" style="padding-top: 34px">
+              <input type="text" placeholder="Nhập từ khóa tìm kiếm" id="q" name="q" value="">
+              <input type="submit" value="Tìm Kiếm">
+            </form>
+        </div>
+          <div class="clearfix"></div>
+        </div>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="GV_TrangChu.html">JWD</a>
+		    </div>
+		     <ul class="nav navbar-nav">
+          <li><a href="GioiThieuMonHoc.html">Giới thiệu các môn học</a></li>
+          <li class="active"><a href="HDSD.html"  style="background-color: green">Hướng dẫn sử dụng website</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span>Welcome</a></li>
+            <li>
+               <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" style="margin: 8px; margin-right: 23px"><span class="glyphicon glyphicon-log-out"></span> Đăng nhập</button>
+               <!-- Modal -->
+              <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog modal-sm">                                    
+                                      <!-- Modal content-->
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title" style="text-align: center;  font-size: 40px;">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                       <div class="row" align="center">
+                          <div class="col-md-6">                  
+                            <input checked="checked" name="quyen" type="radio" value="Giảng Viên"> Giảng Viên
+                 
+                           </div> 
+                          <div class="col-md-6">               
+                          <input checked="checked" name="quyen" type="radio" value="Sinh Vien" > Sinh Viên
+                          </div>
+                      </div>
+                      <form class="form-horizontal" >
+                        <div class="form-group" ">
+                          <label class="control-label col-md-7 " style="text-align: left">Tên đăng nhập</label>
+                          <div class="col-md-12">
+                            <input type="text" class="form-control" placeholder="Enter UserName " id="user">
+                            <div id ="error-user" style="color: red; font-style: italic;"></div> 
+                          </div>
+                                                   
+                        </div>
+                        <div class="form-group" ">
+                          <label class="control-label col-md-12" style="text-align: left">Mật khẩu</label>
+                          <div class="col-md-12" >
+                            <input type="password" class="form-control" placeholder="Enter Password " id ="pass">
+                            <div id="error-pass" style="color: red; font-style: italic;"></div>
+                          </div>
+                        </div>
+                        <div class="form-group">        
+                          <div class="col-md-12" align="center">
+                            <label class="checkbox-inline"><input type="checkbox" value="">Remember Password</label>
+                          </div>
+                        </div>
+                        <div class="form-group">        
+                          <div class="col-md-12" align="center">
+                            <a href="#" class="forget">Quên mật khẩu?</a>
+                          </div>
+                        </div>
+                    </form>
+                  </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-success" onclick="Login()">Login</button>
+                      <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                  </div>                                      
+                </div>
+              </div>
+            </li>
+        </ul>
+		  </div>
+		</nav>
+</div><!-- Kết thúc navbar -->
+<body>
+    <header>
+      <div class="container">
+          <!-- Tạo một banner hiệu ứng chạy trên background -->
+          <marquee bgcolor="#f78af7" width = "1140px" height = "30px" style="margin-top: -17px"><strong><h4>ĐỒ ÁN HỖ TRỢ VIỆC GIẢNG DẠY CHO GIẢNG VIÊN CỦA NHÓM-10 NĂM HỌC 2016-2017<h4></strong></marquee>
+          <!-- Mở đầu côt 1 -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-danger">
+               <!-- Default panel contents -->
+               <div class="panel-heading" align="center"><h4>Nội quy sử dụng website</h4></div>
+               <div class="panel-body">
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Nội quy 1 </h4>
+                    <p class="list-group-item-text">Chỉ là thành viên mới được đăng nhập</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Nội quy 2</h4>
+                    <p class="list-group-item-text">Không được đổi tài khoản lúc không cần thiết</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Nội quy 3</h4>
+                    <p class="list-group-item-text">Nếu muốn cấp tài khoản thì liên hệ giảng viên</p>
+                  </a>
+                </div>
+               </div>
+               <div class="panel-footer" align="center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem Video</button>
+               
+               </div><!--kết thúc footer lớp học-->
+            </div><!--kết thúc panel lớp học-->
+          </div>
+          <!-- Kết thúc cột 1 -->
+          <!-- Mở đầu cột 2 -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-info">
+               <!-- Default panel contents -->
+               <div class="panel-heading" align="center"><h4>Hướng dẫn đăng nhập</h4></div>
+               <div class="panel-body">
+                <div class="list-group">
+                  <h5><strong>- Đối với tài khoản giảng viên</strong></h5>
+                  <h6>+Giảng viên sở hữu dùng email cá nhân do tự mình tạo tài khoản</h6>
+                  <h6>+Password cũng do giảng viên tự tạo mật khẩu</h6> </br>
+
+                  <h5><strong>- Đối với tài khoản sinh viên</strong></h5>
+                  <h6>+Sinh viên dùng email cá nhân do giảng viên cung cấp</h6>
+                  <h6>+Password cũng do giảng viên cung cấp</h6> </br>
+
+                  <h5>*Nếu đăng nhập không được,có thể dùng chức năng reset password trên hệ thốngMoodle(Forgotten your username or password?).</h5>
+                  <h5>* Nếu vẫn không được (do chưa tạo tài khoản hoặc các trường hợp khác),vui lòng liên hệ lầu 11-Trung tâm thông tin Cô Ngân (Phòng A1-1107)để được hỗ trợ.</h5>
+                </div>
+               </div>
+               <div class="panel-footer" align="center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem Video</button>
+               
+               </div><!--kết thúc footer lớp học-->
+            </div><!--kết thúc panel lớp học-->
+          </div>
+          <!-- Kết thúc cột 2 -->
+          <!-- Mở đầu cột 3 -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="panel panel-success">
+               <!-- Default panel contents -->
+               <div class="panel-heading" align="center"><h4>Liên hệ hỗ trợ</h4></div>
+               <div class="panel-body">
+                <div class="list-group">
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Sdt Viettel</h4>
+                    <h5>Đặng Thị Kim Giao</h5>
+                    <p class="list-group-item-text">01694043473</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Sdt Vina</h4>
+                    <h5>Đặng Thị Kim Giao</h5>
+                    <p class="list-group-item-text">01235468852</p>
+                  </a>
+                  <a href="#" class="list-group-item">
+                    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Sdt Văn phòng</h4>
+                     <h5>Đặng Thị Kim Giao</h5>
+                    <p class="list-group-item-text">850000021145</p>
+                  </a>
+                </div>
+               </div>
+               <div class="panel-footer" align="center">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Xem Video</button>
+               
+               </div><!--kết thúc footer lớp học-->
+            </div><!--kết thúc panel lớp học-->
+          </div>
+          <!-- Kết thúc cột 3 -->
+      </div>
+    </header>
+    <!--Footer-->
+    <footer>
+      <div class="container">
+        <div class="footer-info text-center">Đồ án lập trình web 2016 - 2017
+         <br>
+          Designer: Sơn Trần Anh
+        </div>
+      </div>
+    </footer>
+     <!--Kết thúc Footer-->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

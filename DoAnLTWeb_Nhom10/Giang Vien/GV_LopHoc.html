@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Lớp học</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+  		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  		<link href="boostrap/css/style.css" rel="stylesheet">
+
+	<script type="text/javascript">
+		function Capnhat(){
+			var check = true;
+			var tl = document.getElementById('tenlophoc').value;
+			var nbd = document.getElementById('ngaybatdau').value;
+			var nkt = document.getElementById('ngayketthuc').value;
+			var lh = document.getElementById('lichhoc').value;
+			if (tl =="") {
+				document.getElementById('error-tenlophoc').innerHTML = "Vui lòng nhập Tên lớp học";
+				tenlophoc.style.borderColor ="red";
+				check = false;
+			}
+			else {
+				document.getElementById('error-tenlophoc'). innerHTML = "";
+				tenlophoc.style.borderColor ="#ccc"
+			}
+
+			if (nbd =="") {
+				document.getElementById('error-ngaybatdau').innerHTML = "Vui lòng nhập Ngày bắt đầu";
+				ngaybatdau.style.borderColor ="red";
+				check = false;
+			}
+			else {
+				document.getElementById('error-ngaybatdau'). innerHTML = "";
+				ngaybatdau.style.borderColor ="#ccc"
+			}
+
+			if (nkt =="") {
+				document.getElementById('error-ngayketthuc').innerHTML = "Vui lòng nhập Ngày kết thúc";
+				ngayketthuc.style.borderColor ="red";
+				check = false;
+			}
+			else {
+				document.getElementById('error-ngayketthuc'). innerHTML = "";
+				ngayketthuc.style.borderColor ="#ccc"
+			}
+
+			if (lh =="") {
+				document.getElementById('error-lichhoc').innerHTML = "Vui lòng nhập Lịch học";
+				lichhoc.style.borderColor ="red";
+				check = false;
+			}
+			else {
+				document.getElementById('error-lichhoc'). innerHTML = "";
+				lichhoc.style.borderColor ="#ccc"
+			}
+
+			if(check == true)
+			{
+				document.getElementById('inputT').innerHTML = "Chỉnh sửa thành công"
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<div class="container">
+	  	<div class="row">
+          <div class="logo col-md-6 col-sm-6 col-xs-12"><h1><a href="#">Lớp học</a></h1></div>
+          <div class="search col-md-6 col-sm-6 col-xs-12 text-right">
+            <form method="get" action="#" style="padding-top: 34px">
+              <input type="text" placeholder="Nhập từ khóa tìm kiếm" id="q" name="q" value="" >
+              <input type="submit" value="Tìm Kiếm" >
+            </form>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="GV_TrangChu.html">JWD</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li class="active"><a href="GV_LopHoc.html" style="background-color: green">Lớp học</a></li>
+		      <li><a href="GV_SinhVien.html">Sinh viên</a></li>
+		      <li><a href="GV_TraCuu.html">Tra cứu</a></li>
+		      <li><a href="GV_TinNhanDaNhan.html">Tin nhắn</a></li>
+		      <li><a href="GV_ThaoLuan.html">Thảo luận</a></li>
+		      <li><a href="GV_ThongTinCaNhan.html">Thông tin cá nhân</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="GV_ThongTinCaNhan.html"><span class="glyphicon glyphicon-user"></span>  Xin chào Đặng Thị Kim Giao</a></li>
+                <li><a href="DangNhap.html"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a></li>
+		    </ul>
+		  </div>
+		</nav>
+	</div><!-- Kết thúc navbar -->
+    <div class="container">
+    	 <!-- Tạo một banner hiệu ứng chạy trên background -->
+          <marquee bgcolor="#f78af7" width = "1140px" height = "30px" style="margin-top: -17px"><strong><h4>ĐỒ ÁN HỖ TRỢ VIỆC GIẢNG DẠY CHO GIẢNG VIÊN CỦA NHÓM-10 NĂM HỌC 2016-2017<h4></strong></marquee>
+	    <div class="row">
+		  <div class="col-md-4">
+		  	<div class="panel panel-primary">
+				 <!-- Default panel contents -->
+				 <div class="panel-heading" align="center">Các lớp học</div>
+				 <div class="panel-body">
+					<div class="list-group">
+					  <a href="#" class="list-group-item active">
+					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Lập trình web nhóm 1</h4>
+					    <p class="list-group-item-text">Thứ 2, tiết 7-11, Tuần 2-16, Phòng A2-302</p>
+					  </a>
+					  <a href="#" class="list-group-item">
+					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Lập trình web nhóm 2</h4>
+					    <p class="list-group-item-text">Thứ 3, tiết 1-5, Tuần 2-16, Phòng A2-302</p>
+					  </a>
+					  <a href="#" class="list-group-item">
+					    <h4 class="list-group-item-heading"><span class="glyphicon glyphicon-education"></span>Lập trình web nhóm 3</h4>
+					    <p class="list-group-item-text">Thứ 3, tiết 7-11, Tuần 2-16, Phòng A2-302</p>
+					  </a>
+					</div>
+				 </div>
+				 <div class="panel-footer" align="center">
+				 	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal"><span class="glyphicon glyphicon-plus"></span>Thêm lớp học</button>
+					<!-- Modal -->
+					<div id="myModal" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+					    <!-- Modal content-->
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        <h4 class="modal-title">Thêm lớp học</h4>
+					      </div>
+					      <div class="modal-body">
+					        <form class="form-horizontal">
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="TenLopHoc">Tên lớp học:</label>
+					                <div class="col-sm-8">
+					                    <input type="text" class="form-control" name="tenlophoc" placeholder="Nhập tên lớp học">
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="NgayBatDau">Ngày bắt đầu:</label>
+					                <div class="col-sm-8">
+					                    <input type="text" class="form-control" name="ngaybatdau" placeholder="Nhập ngày bắt đầu">
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="NgayKetThuc">Ngày kết thúc:</label>
+					                <div class="col-sm-8">
+					                    <input type="text" class="form-control" name="ngayketthuc" placeholder="Nhập ngày kết thúc">
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="LichHoc">Lịch học:</label>
+					                <div class="col-sm-8">
+					                    <input type="text" class="form-control" name="lichhoc" placeholder="Nhập lịch học">
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="MoTa">Mô tả</label>
+					                <div class="col-sm-8">
+					                    <textarea class="form-control" rows="5" id="mota" placeholder="Nhập mô tả"></textarea>
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="ImportSV">Danh sách sinh viên:</label>
+					                <div class="col-sm-7">
+					                    <input type="text" class="form-control" name="danhsachsinhvien" placeholder="*.xlsx" disabled>
+					                </div>
+					                <button type="button col-sm-1" class="btn btn-primary">...</button>
+					            </div>
+					          </form>
+					      </div>
+					      <div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Thêm</button>
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+					      </div>
+					    </div>
+					  </div>
+					</div><!--kết thúc model thêm lớp học-->
+				 </div><!--kết thúc footer lớp học-->
+			</div><!--kết thúc panel lớp học-->
+		</div>
+
+		<div class="col-md-8">
+		  	<div class="panel panel-primary">
+				<div class="panel-heading">
+				    <h3 class="panel-title" align="center">Lập trình web nhóm 1</h3>
+				</div>
+			  	<div class="panel-body">
+			    	<div class="panel panel-primary">
+				  		<div class="panel-heading" align="center">
+				    		<h3 class="panel-title">Tuần 1</h3>
+				  		</div>
+					  	<div class="panel-body">
+							<div class="list-group">
+							  <a href="#" class="list-group-item">
+								<div class="col-sm-11">
+									<h4 class="list-group-item-heading">Đề cương chi tiết</h4>
+								</div>
+								<div class="col-sm-0">
+							    	<button type="button col-sm-1" class="btn btn-primary btn-xs" data-toggle="modal" data-target="							#EditTaiLieu"><span class="glyphicon glyphicon-pencil"></span>Edit</button>
+									<!-- Modal -->
+									<div id="EditTaiLieu" class="modal fade" role="dialog">
+										<div class="modal-dialog">
+										<!-- Modal content-->
+											<div class="modal-content">
+											    <div class="modal-header" align="center">
+											        <button type="button" class="close" data-dismiss="modal">&times;</button>
+											        <h4 class="modal-title">Chỉnh sửa</h4>
+											    </div>
+											    <div class="modal-body">
+											        <form class="form-horizontal">
+											            <div class="form-group">
+											               <label class="control-label col-sm-4" for="tentailieu">Tên tài liệu:</label>
+											                <div class="col-sm-8">
+											                    <input type="text" class="form-control" name="tentailieu" placeholder="Tên tài liệu">
+											                </div>
+											            </div>
+											            <div class="form-group">
+											               <label class="control-label col-sm-4" for="file">File đính kèm:</label>
+											                <div class="col-sm-7">
+											                    <input type="text" class="form-control" name="file" placeholder="File đính kèm" disabled>
+											                </div>
+											                <button type="button col-sm-1" class="btn btn-primary">...</button>
+											            </div>
+											          </form>
+											    </div>
+											    <div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Cập nhật</button>	   
+													<button type="button" class="btn btn-default" data-dismiss="modal">Xóa</button>
+													<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+											    </div>
+											</div>
+										</div><!--kết thúc model thêm chủ đề-->
+									</div>
+								</div>
+								
+							  </a>
+							  <a href="#" class="list-group-item">
+								<div class="col-sm-11">
+									<h4 class="list-group-item-heading">Giáo trình HTML và CSS</h4>
+								</div>
+								<div class="col-sm-0">
+							    	<button type="button col-sm-1" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#EditTaiLieu"><span 			class="glyphicon glyphicon-pencil"></span>Edit</button>
+								</div>
+							  </a>
+							  <a href="#" class="list-group-item">
+								<div class="col-sm-11">
+									<h4 class="list-group-item-heading">Giáo trình Java</h4>
+								</div>
+								<div class="col-sm-0">
+							    	<button type="button col-sm-1" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#EditTaiLieu"><span 			class="glyphicon glyphicon-pencil"></span>Edit</button>
+								</div>
+							  </a>
+							  <a href="#" class="list-group-item">
+								<div class="col-sm-11">
+									<h4 class="list-group-item-heading">Bài tập thực hành số 1</h4>
+								</div>
+								<div class="col-sm-0">
+							    	<button type="button col-sm-1" class="btn btn-primary btn-xs" data-toggle="modal" data-target="#EditBaiTap"><span 			class="glyphicon glyphicon-pencil"></span>Edit</button>
+									<!-- Modal -->
+									<div id="EditBaiTap" class="modal fade" role="dialog">
+									  <div class="modal-dialog">
+
+									    <!-- Modal content-->
+									    <div class="modal-content">
+									      <div class="modal-header" align="center">
+									        <button type="button" class="close" data-dismiss="modal">&times;</button>
+									        <h4 class="modal-title">Chỉnh sửa bài tập</h4>
+									      </div>
+									      <div class="modal-body">
+									        <form class="form-horizontal">
+									            <div class="form-group">
+									               <label class="control-label col-sm-4" for="tieude">Tiêu đề:</label>
+									                <div class="col-sm-8">
+									                    <input type="text" class="form-control" name="tieude" placeholder="Tiêu đề">
+									                </div>
+									            </div>
+
+									            <div class="form-group">
+										            <label class="control-label col-sm-4" for="noidung">Nội dung:</label>
+										            <div class="col-sm-8">
+										                <textarea class="form-control" rows="5" id="noidung" placeholder="Nội dung"></textarea>
+										            </div>
+										        </div>
+
+									            <div class="form-group">
+									               <label class="control-label col-sm-4" for="hanchot">Hạn chót:</label>
+									                <div class="col-sm-8">
+									                    <input type="text" class="form-control" name="hanchot" placeholder="Hạn chót">
+									                </div>
+									            </div>
+
+									            <div class="form-group">
+									               <label class="control-label col-sm-4" for="file">File:</label>
+									                <div class="col-sm-7">
+									                    <input type="text" class="form-control" name="file" placeholder="*.*" disabled>
+									                </div>
+									                <button type="button col-sm-1" class="btn btn-primary">...</button>
+									            </div>
+									          </form>
+									      </div>
+									      <div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Cập nhật</button>
+											<button type="button" class="btn btn-default" data-dismiss="modal">Xóa</button>
+									        <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+									      </div>
+									    </div>
+									  </div>
+									</div><!--kết thúc model edit bài tập-->
+								</div>
+							  </a>
+							</div>
+						</div><!-- /.body panal tuần học 1 -->
+						<div class="panel-footer" align="center">
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal_ThemTaiLieu"><span class="glyphicon glyphicon-plus"></span> Thêm tài liệu</button>
+							<!-- Modal -->
+							<div id="myModal_ThemTaiLieu" class="modal fade" role="dialog">
+							  <div class="modal-dialog">
+
+							    <!-- Modal content-->
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal">&times;</button>
+							        <h4 class="modal-title">Thêm tài liệu</h4>
+							      </div>
+							      <div class="modal-body">
+							        <form class="form-horizontal">
+							            <div class="form-group">
+							               <label class="control-label col-sm-4" for="tieude">Tiêu đề:</label>
+							                <div class="col-sm-8">
+							                    <input type="text" class="form-control" name="tieude" placeholder="Nhập tiêu đề">
+							                </div>
+							            </div>
+
+							            <div class="form-group">
+							               <label class="control-label col-sm-4" for="file">File:</label>
+							                <div class="col-sm-7">
+							                    <input type="text" class="form-control" name="file" placeholder="*.*" disabled>
+							                </div>
+							                <button type="button col-sm-1" class="btn btn-primary">...</button>
+							            </div>
+							          </form>
+							      </div>
+							      <div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Thêm</button>
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+							      </div>
+							    </div>
+							  </div>
+							</div><!--kết thúc model thêm lớp học-->
+							
+							<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span> Xóa tất cả tài liệu</button>
+							
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ThemBaiTap"><span class="glyphicon glyphicon-plus"></span> Thêm bài tập</button>
+							<!-- Modal -->
+							<div id="ThemBaiTap" class="modal fade" role="dialog">
+							  <div class="modal-dialog">
+
+							    <!-- Modal content-->
+							    <div class="modal-content">
+							      <div class="modal-header">
+							        <button type="button" class="close" data-dismiss="modal">&times;</button>
+							        <h4 class="modal-title"><span class="glyphicon glyphicon-plus"></span> Thêm bài tập</h4>
+							      </div>
+							      <div class="modal-body">
+							        <form class="form-horizontal">
+							            <div class="form-group">
+							               <label class="control-label col-sm-4" for="tieude">Tiêu đề:</label>
+							                <div class="col-sm-8">
+							                    <input type="text" class="form-control" name="tieude" placeholder="Tiêu đề">
+							                </div>
+							            </div>
+
+							            <div class="form-group">
+								            <label class="control-label col-sm-4" for="noidung">Nội dung:</label>
+								            <div class="col-sm-8">
+								                <textarea class="form-control" rows="5" id="noidung" placeholder="Nội dung"></textarea>
+								            </div>
+								        </div>
+
+							            <div class="form-group">
+							               <label class="control-label col-sm-4" for="hanchot">Hạn chót:</label>
+							                <div class="col-sm-8">
+							                    <input type="text" class="form-control" name="hanchot" placeholder="Hạn chót">
+							                </div>
+							            </div>
+
+							            <div class="form-group">
+							               <label class="control-label col-sm-4" for="file">File:</label>
+							                <div class="col-sm-7">
+							                    <input type="text" class="form-control" name="file" placeholder="*.*" disabled>
+							                </div>
+							                <button type="button col-sm-1" class="btn btn-primary">...</button>
+							            </div>
+							          </form>
+							      </div>
+							      <div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Thêm</button>
+							        <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+							      </div>
+							    </div>
+							  </div>
+							</div><!--kết thúc model thêm bài tập-->
+							
+							<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#danhsachbainop"><span class="glyphicon glyphicon-folder-open"></span>  Danh sách bài nộp</button>
+								<div id="danhsachbainop" class="modal fade" role="dialog">
+									<div  class="modal-dialog" style="width: auto;">
+									    <!-- Modal content-->
+									    <div class="modal-content">
+									      <div class="modal-header">
+									        <button type="button" class="close" data-dismiss="modal">&times;</button>
+									        <h4 class="modal-title">Danh sách bài nộp</h4>
+											<h5>Tuần 1</h5>
+									      </div>
+									      <div class="modal-body">
+									        <div class="dropdown">
+										  		<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Bài tập thực hành số 1<span class="caret"></span></button>
+												<ul class="dropdown-menu">
+												   <li><a href="#">Bài tập thực hành số 1</a></li>
+												</ul>
+											</div>
+
+										  <div class="panel-heading" align="center">Mô phỏng paper prototype</div>
+											  <table class="table table-bordered">
+											    <thead>
+											      <tr>
+											        <th>MSSV(Tài khoản)</th>
+											        <th>Họ Tên</th>
+											        <th>Thời gian nộp</th>
+											        <th>File</th>
+											        <td>Điểm</td>
+											        <td>Nhận xét</td>
+											      </tr>
+											    </thead>
+											    <tbody>
+											      <tr>
+											        <td>14110171</td>
+											        <td>Trần Anh Sơn</td>
+											        <td>11:30 PM 19/09/2016</td>
+											        <td><a href="#">14110171_TranAnhSon.zar</a></td>
+											        <td>
+											        	<input type="text" class="form-control" name="diem" placeholder="Điểm">
+											        </td>
+											        <td>
+											        	<textarea class="form-control" rows="5" id="nhanxet" placeholder="Nhận xét"></textarea>
+											        </td>
+											      </tr>
+											      <tr>
+											        <td>14110134</td>
+											        <td>Nguyễn Đức Ngưu</td>
+											        <td>11:30 PM 19/09/2016</td>
+											        <td><a href="#">14110134_NguyenDucNguu.zar</a></td>
+											        <td>
+											        	<input type="text" class="form-control" name="diem" placeholder="Điểm">
+											        </td>
+											        <td>
+											        	<textarea class="form-control" rows="5" id="nhanxet" placeholder="Nhận xét"></textarea>
+											        </td>
+											      </tr>
+											      <tr>
+											        <td>14110166</td>
+											        <td>Nguyễn Trường Sang</td>
+											        <td>11:30 PM 19/09/2016</td>
+											        <td><a href="#">14110166_NguyenTruongSang.zar</a></td>
+											        <td>
+											        	<input type="text" class="form-control" name="diem" placeholder="Điểm">
+											        </td>
+											        <td>
+											        	<textarea class="form-control" rows="5" id="nhanxet" placeholder="Nhận xét"></textarea>
+											        </td>
+											      </tr>
+											      <tr>
+											        <td>14110121</td>
+											        <td>Phan Thị Kim Hoa</td>
+											        <td>11:30 PM 19/09/2016</td>
+											        <td><a href="#">14110121_PhanThiKimHoa.zar</a></td>
+											        <td>
+											        	<input type="text" class="form-control" name="diem" placeholder="Điểm">
+											        </td>
+											        <td>
+											        	<textarea class="form-control" rows="5" id="nhanxet" placeholder="Nhận xét"></textarea>
+											        </td>
+											      </tr>
+											    </tbody>
+											  </table> <!--Ket thuc tao bang-->
+									      </div>
+									      <div class="modal-footer">
+									        <button type="button" class="btn btn-default" data-dismiss="modal">OK</button>
+									      </div>
+									    </div>
+									  </div>
+									</div><!--kết thúc model danh sách bài nộp-->
+								</div>
+						</div><!-- /.footer panal tuần học 1 -->
+			  		</div><!-- /.panal tuần học 1 -->
+				</div><!-- /.body panal khóa học -->
+				<div class="panel-footer" align="center">
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal_ChinhSuaLopHoc"><span class="glyphicon glyphicon-pencil"></span> Chỉnh sửa lớp học</button>
+					<!-- Modal -->
+					<div id="myModal_ChinhSuaLopHoc" class="modal fade" role="dialog">
+					  <div class="modal-dialog">
+
+					    <!-- Modal content-->
+					    <div class="modal-content">
+					      <div class="modal-header">
+					        <button type="button" class="close" data-dismiss="modal">&times;</button>
+					        <h4 class="modal-title"><span class="glyphicon glyphicon-pencil"></span> Chỉnh sửa lớp học</h4>
+					      </div>
+					      <div class="modal-body">
+					        <form class="form-horizontal">
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="TenLopHoc">Tên lớp học:</label>
+					                <div class="col-sm-8">
+					                    <input type="text" class="form-control" id="tenlophoc" placeholder="Nhập tên lớp học">
+					                    <div id ="error-tenlophoc" style="color: red; font-style: italic;" align="left"></div>
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="NgayBatDau">Ngày bắt đầu:</label>
+					                <div class="col-sm-8">
+					                    <input type="text" class="form-control" id="ngaybatdau" placeholder="Nhập ngày bắt đầu">
+					                    <div id="error-ngaybatdau" style="color: red; font-style: italic;" align="left"></div>
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="NgayKetThuc">Ngày kết thúc:</label>
+					                <div class="col-sm-8">
+					                    <input type="text" class="form-control" id="ngayketthuc" placeholder="Nhập ngày kết thúc">
+					                    <div id="error-ngayketthuc" style="color: red; font-style: italic;" align="left"></div>
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="LichHoc">Lịch học:</label>
+					                <div class="col-sm-8">
+					                    <input type="text" class="form-control" id="lichhoc" placeholder="Nhập lịch học">
+					                    <div id="error-lichhoc" style="color: red; font-style: italic;" align="left"></div>
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="MoTa">Mô tả</label>
+					                <div class="col-sm-8">
+					                    <textarea class="form-control" rows="5" id="mota" placeholder="Nhập mô tả"></textarea>
+					                </div>
+					            </div>
+
+					            <div class="form-group">
+					               <label class="control-label col-sm-4" for="ImportSV">Danh sách sinh viên:</label>
+					                <div class="col-sm-7">
+					                    <input type="text" class="form-control" name="danhsachsinhvien" placeholder="*.xlsx" disabled>
+					                </div>
+					                <button type="button col-sm-1" class="btn btn-primary">...</button>
+					            </div>
+					            <div class="form-group" >
+					            	<div id="inputT" align="center" style="color: green; font-style: italic;"></div>
+					            </div>
+					          </form>
+					      </div>
+					      <div class="modal-footer">
+							<button type="button" class="btn btn-default" onclick="Capnhat()">Cập nhật</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Xóa</button>
+					        <button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+					      </div>
+					    </div>
+					  </div>
+					</div><!--kết thúc model thêm lớp học-->
+
+					<button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Thêm tuần học</button>
+				</div><!-- /.footer panal khóa học -->
+		  	</div><!-- /.panal khóa học -->
+		</div>
+    </div><!--kết thúc body container -->
+</body>
+</html>

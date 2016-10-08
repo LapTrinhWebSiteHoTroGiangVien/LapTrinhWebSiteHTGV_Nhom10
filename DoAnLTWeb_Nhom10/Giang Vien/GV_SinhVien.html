@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE-edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Sinh Viên</title>
+		<link rel="stylesheet" type="text/css" href="bootstrap/css/style.css">
+  		 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <link href="boostrap/css/style.css" rel="stylesheet">
+  		<!-- style table -->
+  		<style> 
+  			th {
+    			background-color: #4CAF50;
+    			color: white;
+				}
+  		</style>
+</head>
+<body>
+	<div class="container">
+	<div class="row">
+          <div class="logo col-md-6 col-sm-6 col-xs-12"><h1><a href="#">Quản lí sinh viên</a></h1></div>
+          <div class="search col-md-6 col-sm-6 col-xs-12 text-right">
+            <form method="get" action="#" style="padding-top: 34px">
+              <input type="text" placeholder="Nhập từ khóa tìm kiếm" id="q" name="q" value="" >
+              <input type="submit" value="Tìm Kiếm" >
+            </form>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+		<nav class="navbar navbar-inverse">
+		  <div class="container-fluid">
+		    <div class="navbar-header">
+		      <a class="navbar-brand" href="GV_TrangChu.html">JWD</a>
+		    </div>
+		    <ul class="nav navbar-nav">
+		      <li><a href="GV_LopHoc.html">Lớp học</a></li>
+		      <li class="active"><a href="GV_SinhVien.html" style="background-color: green">Sinh viên</a></li>
+		      <li><a href="GV_TraCuu.html">Tra cứu</a></li>
+		      <li><a href="GV_TinNhanDaNhan.html">Tin nhắn</a></li>
+		      <li><a href="GV_ThaoLuan.html">Thảo luận</a></li>
+		      <li><a href="GV_ThongTinCaNhan.html">Thông tin cá nhân</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav navbar-right">
+		      <li><a href="GV_ThongTinCaNhan.html"><span class="glyphicon glyphicon-user"></span>  Xin chào Đặng Thị Kim Giao</a></li>
+                <li><a href="DangNhap.html"><span class="glyphicon glyphicon-log-in"></span> Đăng xuất</a></li>
+		    </ul>
+		  </div>
+		</nav>
+	</div><!-- Kết thúc navbar -->
+
+    <div class="container">
+     <!-- Tạo một banner hiệu ứng chạy trên background -->
+     <marquee bgcolor="#f78af7" width = "1140px" height = "30px" style="margin-top: -17px"><strong><h4>ĐỒ ÁN HỖ TRỢ VIỆC GIẢNG DẠY CHO GIẢNG VIÊN CỦA NHÓM-10 NĂM HỌC 2016-2017<h4></strong></marquee>
+	    <div class="panel-heading" align="center"><h1>DANH SÁCH SINH VIÊN</h1> <h3>Lớp lập trình web nhóm 1</h3></div>
+		<div class="dropdown">
+		  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Danh sách lớp
+		  <span class="caret"></span></button>
+		  <ul class="dropdown-menu">
+		    <li><a href="#">Lập trình web nhóm 1</a></li>
+		    <li><a href="#">Lập trình web nhóm 2</a></li>
+		    <li><a href="#">Lập trình web nhóm 3</a></li>
+		  </ul>
+		</div>
+
+		<div class="panel-heading" align="center">(Chỉnh sửa thông tin sinh viên)</div>
+		  <table class="table table-bordered">
+		    <thead>
+		      <tr>
+		        <th>MSSV(Tài khoản)</th>
+		        <th>Họ Tên</th>
+		        <th>Ngày Sinh</th>
+		        <th>Email</th>
+		        <th>Sửa</th>
+		        <th>Xóa</th>
+		      </tr>
+		    </thead>
+		    <tbody>
+		      <tr>
+		        <td>14110171</td>
+		        <td>Trần Anh Sơn</td>
+		        <td>25/11/1996</td>
+		        <td>sontrananh96@gmail.com</td>
+		        <td>
+		        	<button href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#EditTaiKhoan"></span> Sửa</button>
+		        		<div id="EditTaiKhoan" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header" align="center">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Chỉnh sửa</h4>
+									</div>
+									<div class="modal-body">
+											<form class="form-horizontal">
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="mssv" style="text-align: left">MSSV:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="tentailieu" placeholder="MSSV">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="hovaten" style="text-align: left">Họ và tên:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="hoten" placeholder="Họ và tên">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="ngaysinh" style="text-align: left">Ngày sinh:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="ngaysinh" placeholder="Example: .../.../...">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="Email" style="text-align: left">Email:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="Email" placeholder="Example: sontrananh96@gmail.com">
+											        </div>
+											    </div>
+											 </form>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Cập nhật</button>	   
+										<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+									</div>
+								</div>
+							</div><!--kết thúc model thêm tài -->
+						</div> 
+		        </td>
+		         <td>	
+		  			<button href="#" class="btn btn-info"><span class="glyphicon glyphicon-remove"></span> Xóa</button>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>14110134</td>
+		        <td>Nguyễn Đức Ngưu</td>
+		        <td>26/11/1996</td>
+		        <td>nguu96@gmail.com</td>
+		         <td>
+		        	<button href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#EditTaiKhoan"></span> Sửa</button>
+		        		<div id="EditTaiKhoan" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header" align="center">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Chỉnh sửa</h4>
+									</div>
+									<div class="modal-body">
+											<form class="form-horizontal">
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="mssv" style="text-align: left">MSSV:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="tentailieu" placeholder="MSSV">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="hovaten" style="text-align: left">Họ và tên:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="hoten" placeholder="Họ và tên">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="ngaysinh" style="text-align: left">Ngày sinh:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="ngaysinh" placeholder="Example: .../.../...">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="Email" style="text-align: left">Email:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="Email" placeholder="Example: sontrananh96@gmail.com">
+											        </div>
+											    </div>
+											 </form>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Cập nhật</button>	   
+										<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+									</div>
+								</div>
+							</div><!--kết thúc model thêm tài -->
+						</div> 
+		        </td>
+		         <td>	
+		  			<a href="#" class="btn btn-info"><span class="glyphicon glyphicon-remove"></span> Xóa</a>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>14110166</td>
+		        <td>Nguyễn Trường Sang</td>
+		        <td>27/9/1996</td>
+		        <td>sang96@gmail.com</td>
+		         <td>
+		        	<button href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#EditTaiKhoan"></span> Sửa</button>
+		        		<div id="EditTaiKhoan" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header" align="center">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Chỉnh sửa</h4>
+									</div>
+									<div class="modal-body">
+											<form class="form-horizontal">
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="mssv" style="text-align: left">MSSV:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="tentailieu" placeholder="MSSV">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="hovaten" style="text-align: left">Họ và tên:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="hoten" placeholder="Họ và tên">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="ngaysinh" style="text-align: left">Ngày sinh:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="ngaysinh" placeholder="Example: .../.../...">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="Email" style="text-align: left">Email:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="Email" placeholder="Example: sontrananh96@gmail.com">
+											        </div>
+											    </div>
+											 </form>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Cập nhật</button>	   
+										<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+									</div>
+								</div>
+							</div><!--kết thúc model thêm tài -->
+						</div> 
+		        </td>
+		         <td>	
+		  			<a href="#" class="btn btn-info"><span class="glyphicon glyphicon-remove"></span> Xóa</a>
+		        </td>
+		      </tr>
+		      <tr>
+		        <td>14110121</td>
+		        <td>Phan Thị Kim Hoa</td>
+		        <td>28/09/1996</td>
+		        <td>HoaKimPhan@gmail.com</td>
+		         <td>
+		        	<button href="#" class="btn btn-info"><span class="glyphicon glyphicon-pencil" data-toggle="modal" data-target="#EditTaiKhoan"></span> Sửa</button>
+		        		<div id="EditTaiKhoan" class="modal fade" role="dialog">
+							<div class="modal-dialog">
+							<!-- Modal content-->
+								<div class="modal-content">
+									<div class="modal-header" align="center">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h4 class="modal-title">Chỉnh sửa</h4>
+									</div>
+									<div class="modal-body">
+											<form class="form-horizontal">
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="mssv" style="text-align: left">MSSV:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="tentailieu" placeholder="MSSV">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="hovaten" style="text-align: left">Họ và tên:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="hoten" placeholder="Họ và tên">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="ngaysinh" style="text-align: left">Ngày sinh:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="ngaysinh" placeholder="Example: .../.../...">
+											        </div>
+											    </div>
+											    <div class="form-group">
+											       <label class="control-label col-sm-3" for="Email" style="text-align: left">Email:</label>
+											        <div class="col-sm-9">
+											            <input type="text" class="form-control" name="Email" placeholder="Example: sontrananh96@gmail.com">
+											        </div>
+											    </div>
+											 </form>
+									</div>
+									<div class="modal-footer">
+										<button type="button" class="btn btn-default" data-dismiss="modal">Cập nhật</button>	   
+										<button type="button" class="btn btn-default" data-dismiss="modal">Hủy</button>
+									</div>
+								</div>
+							</div><!--kết thúc model thêm tài -->
+						</div> 
+		        </td>
+		         <td>	
+		  			<a href="#" class="btn btn-info"><span class="glyphicon glyphicon-remove"></span> Xóa</a>
+		        </td>
+		      </tr>
+		    </tbody>
+		  </table> <!--Ket thuc tao bang-->
+		 <div class="btn-group btn-group-justified">
+		  <a href="GV_ThemTaiKhoan.html" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Thêm tài khoản</a>
+		  <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-remove"></span> Xóa danh sách</a>
+		  <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-upload"></span> Upload acount(.xlsx)</a>
+		</div>
+    </div><!--kết thúc body container -->
+</body>
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+	  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="jQuery/Jquery/jquery-3.1.1.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
+    <script type="text/javascript">
+      function myfun(){
+        var flag =  true;
+        var quequan = document.getElementById('address').value;
+        var eml = document.getElementById('email').value;
+        var sdt = document.getElementById('phone').value;
+        var matkhau = document.getElementById('password').value
+        if (quequan=="") {
+          document.getElementById('error-address').innerHTML = "Vui lòng nhập Quê quán";
+          address.style.borderColor = "red";
+          flag = false
+        }
+        else
+        {
+          document.getElementById('error-address').innerHTML = "";
+          address.style.borderColor = "#ccc";
+        } 
+
+        if (eml=="") {
+          document.getElementById('error-email').innerHTML = "Vui lòng nhập địa chỉ Email";
+          email.style.borderColor = "red";
+          flag = false
+        }
+         else
+        {
+          document.getElementById('error-email').innerHTML = "";
+          email.style.borderColor = "#ccc";
+        } 
+
+        if (sdt=="") {
+          document.getElementById('error-phone').innerHTML = "Vui lòng nhập Số điện thoại";
+          phone.style.borderColor = "red";
+          flag = false
+        }
+         else
+        {
+          document.getElementById('error-phone').innerHTML = "";
+          phone.style.borderColor = "#ccc";
+        } 
+
+        if (matkhau=="") {
+          document.getElementById('error-password').innerHTML = "Vui lòng nhập Mật khẩu";
+          password.style.borderColor = "red";
+          flag = false
+        }
+        else if (matkhau.length < 8) 
+        {
+          document.getElementById('error-password').innerHTML = "Mật khẩu phải từ 8 kí tự trở lên";
+          password.style.borderColor = "red";
+          flag = false
+        }
+         else
+        {
+          document.getElementById('error-password').innerHTML = "";
+          password.style.borderColor = "#ccc";
+        }
+
+        if(flag==true)
+        {
+          document.getElementById('formData').submit()
+        }
+
+    }
+    </script>
+</head>
+<body>
+	<div class="container">
+    <div class="row">
+      <div class="logo col-md-6 col-sm-6 col-xs-12"><h1 style="color: blue;">Thông Tin Cá Nhân</h1></div>         
+        <div class="clearfix"></div>
+    </div>
+		<div class="navbar navbar-inverse" role="navigation">
+      		<div class="container">
+      			<div class="navbar-header">          
+          			<a class="navbar-brand" href="#">JWD</a>
+        		</div>
+
+        		<div class="collapse navbar-collapse">
+          			<ul class="nav navbar-nav">
+            			   <li><a href="SinhVien_ChiTietLopHoc.html">Chi tiết lớp học</a></li>
+                    <li><a href="SinhVien_Xemdiem.html">Xem điểm</a></li>
+                    <li><a href="SinhVien_ThaoLuan.html">Thảo luận </a></li>                        
+                    <li><a href="SinhVien_KeHoachHocTap.html">Kế hoạch học tập</a></li>
+                    <li  class="active" ><a href="SinhVien_TTCN.html" style="background-color: green">Thông tin cá nhân</a></li>
+          			</ul>
+      				<ul class="nav navbar-nav navbar-right">
+      					<li><a href="#"><span class="glyphicon glyphicon-user"></span> Xin chào, Nguyễn Đức Ngưu</a></li>
+      					 <li><a href=""><span class="glyphicon glyphicon-log-out"></span> Đăng xuất</a></li>    				
+      				</ul>
+        		</div>      		   	        	
+      		</div>
+   	</div>
+  </div>
+  <div class="container">          
+    <marquee bgcolor="#f78af7" width = "1140px" height = "30px"><strong><h4>ĐỒ ÁN HỖ TRỢ VIỆC GIẢNG DẠY CHO GIẢNG VIÊN CỦA NHÓM-10 NĂM HỌC 2016-2017<h4></strong></marquee>
+  </div>
+  <div class="container">
+   	<div class="row">
+   		<div class="col-md-8">        
+        <form class="form-horizontal" id="formData">
+          <div class="form-group">
+                <label class="col-sm-2 control-label">MSSV:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="14110134" disabled>
+                </div>
+          </div>
+          <div class="form-group">
+                <label class="col-sm-2 control-label">Họ tên:</label>
+                <div class="col-sm-10">
+                    <input class="form-control"  type="text" value="Nguyễn Đức Ngưu" disabled>
+                </div>
+          </div>
+          <div class="form-group">
+                <label class="col-sm-2 control-label">Ngày Sinh:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" type="text" value="15/12/1996" disabled>
+                </div>
+          </div>
+          <div class="form-group">
+                <label class="col-sm-2 control-label">Quê quán:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="address" type="text" value="Thanh Hóa">
+                    <div id="error-address" style="color: red; font-style: italic;"></div>
+                </div>
+          </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Email:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="email" type="email" value="14110134@student.hcmute.edu.vn">
+                    <div id="error-email" style="color: red; font-style: italic;"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">SĐT:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="phone" type="text" value="0969741193">
+                    <div id="error-phone" style="color: red; font-style: italic;"></div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Mật khẩu:</label>
+                <div class="col-sm-10">
+                    <input class="form-control" id="password" type="text" value="14110134">
+                    <div id="error-password" style="color: red; font-style: italic;"></div>
+                </div>
+            </div>
+            <div align="center">
+              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal" onclick="myfun()">Upload</button>
+                
+            </div>            
+        </form> 
+      </div>
+      <div class="col-md-4">
+          <img src="img/images.jpg" class="thumbnail" style="width: 340px; height: 328px">        
+      </div>
+    </div>   			
+   </div>
+
+   	
+</body>
+</html>
